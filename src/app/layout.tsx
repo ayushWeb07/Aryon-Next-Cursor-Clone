@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
-import { Poppins } from "next/font/google";
+import { Outfit } from "next/font/google";
 
-const poppins = Poppins({
+const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins"
+  variable: "--font-outfit"
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${poppins.className}`}
+      className={`dark ${outfit.className}`}
       suppressHydrationWarning
     >
       <body>
