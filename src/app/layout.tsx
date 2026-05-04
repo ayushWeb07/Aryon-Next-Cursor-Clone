@@ -9,10 +9,9 @@ import {
 } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { Outfit } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Button } from "@/components/ui/button";
-import { ConvexClientProvider } from "./ConvexClientProvider";
-
+import { ConvexClientProvider } from "@/components/providers/convex-client-provider";
 
 const outfit = Outfit({
 	subsets: ["latin"],
