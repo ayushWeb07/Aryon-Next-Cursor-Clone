@@ -56,9 +56,7 @@ export default function RootLayout({
 							</Show>
 						</header>
 
-						<ConvexClientProvider>
-						{children}
-						</ConvexClientProvider>
+						<ConvexClientProvider>{children}</ConvexClientProvider>
 					</ClerkProvider>
 				</ThemeProvider>
 			</body>
