@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Outfit } from "next/font/google";
 import {
 	ClerkProvider,
 	Show,
@@ -10,6 +8,9 @@ import {
 	UserButton,
 } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import { Outfit } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Button } from "@/components/ui/button";
 
 const outfit = Outfit({
 	subsets: ["latin"],
@@ -44,9 +45,9 @@ export default function RootLayout({
 							<Show when="signed-out">
 								<SignInButton />
 								<SignUpButton>
-									<button className="bg-purple-700 text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+									<Button className="bg-purple-700 text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
 										Sign Up
-									</button>
+									</Button>
 								</SignUpButton>
 							</Show>
 							<Show when="signed-in">
