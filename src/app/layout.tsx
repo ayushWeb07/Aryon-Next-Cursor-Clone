@@ -11,6 +11,8 @@ import { dark } from "@clerk/themes";
 import { Outfit } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
+import { ConvexClientProvider } from "./ConvexClientProvider";
+
 
 const outfit = Outfit({
 	subsets: ["latin"],
@@ -55,7 +57,9 @@ export default function RootLayout({
 							</Show>
 						</header>
 
+						<ConvexClientProvider>
 						{children}
+						</ConvexClientProvider>
 					</ClerkProvider>
 				</ThemeProvider>
 			</body>
