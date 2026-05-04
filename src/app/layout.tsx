@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { Outfit } from "next/font/google";
 import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
-
+import { dark } from "@clerk/themes";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -33,7 +33,7 @@ export default function RootLayout({
             defaultTheme="dark"
             disableTransitionOnChange
         >
-          <ClerkProvider>
+          <ClerkProvider appearance={{ baseTheme: dark }} >
             <header className="flex justify-end items-center p-4 gap-4 h-16">
               <Show when="signed-out">
                 <SignInButton />
